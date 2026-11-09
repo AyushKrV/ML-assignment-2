@@ -1,0 +1,84 @@
+{
+  "table": {
+    "tree": {
+      "clean_acc": 0.55,
+      "masked_acc": 0.25,
+      "clean_conf": 1.0,
+      "masked_conf": 1.0
+    },
+    "bagging": {
+      "clean_acc": 0.8,
+      "masked_acc": 0.6375,
+      "clean_conf": 0.38637499999999997,
+      "masked_conf": 0.26399999999999996
+    },
+    "boosting": {
+      "clean_acc": 0.4125,
+      "masked_acc": 0.3875,
+      "clean_conf": 0.12097046196243033,
+      "masked_conf": 0.11700264902356228
+    }
+  },
+  "mean_exposure": {
+    "bagging": 0.63825,
+    "boosting": 0.23071053965148408
+  },
+  "face": {
+    "test_index": 14,
+    "selection_rule": "bagging stays correct, boosting breaks",
+    "true": 7,
+    "bagging": {
+      "clean_pred": 7,
+      "masked_pred": 7,
+      "true_votes_clean": 56,
+      "true_votes_masked": 30,
+      "winner_share_clean": 0.56,
+      "winner_share_masked": 0.3,
+      "tree_disagreement_clean": 0.6654545454545455,
+      "tree_disagreement_masked": 0.8826262626262626,
+      "trees_changing_vote": 44,
+      "trees_using_block_on_clean": 0.49
+    },
+    "boosting": {
+      "clean_pred": 7,
+      "masked_pred": 3,
+      "q_true_clean": 0.11762162905689749,
+      "q_true_masked": 0.07779529665715075,
+      "winner_q_clean": 0.11762162905689749,
+      "winner_q_masked": 0.09899647081275369,
+      "learners_changing_vote": 13,
+      "alpha_mass_changing": 0.13277263744343767,
+      "alpha_mass_using_block_on_clean": 0.21047057815429993,
+      "mean_true_identity_weight_changing": 0.021696331831515373,
+      "mean_true_identity_weight_others": 0.019335042070147367,
+      "uniform_identity_weight": 0.025,
+      "top_changing_learners": [
+        {
+          "round": 29,
+          "alpha": 3.2842247730853913,
+          "top10_weight_mass": 0.33730376617192825
+        },
+        {
+          "round": 48,
+          "alpha": 3.164424909315205,
+          "top10_weight_mass": 0.21174976496411463
+        },
+        {
+          "round": 60,
+          "alpha": 3.14250068503468,
+          "top10_weight_mass": 0.40687818041625057
+        },
+        {
+          "round": 13,
+          "alpha": 3.140769633822817,
+          "top10_weight_mass": 0.29373311955765385
+        },
+        {
+          "round": 84,
+          "alpha": 3.0764571436954795,
+          "top10_weight_mass": 0.3724067419852893
+        }
+      ]
+    }
+  }
+}
